@@ -42,11 +42,12 @@
     res.send(`the item with id: ${id} was deleted from the db`);
   }
 
-  export const updateItem = (req,res) => {  
+  export const updateItem = (req,res) => { 
+    console.log(req.body); 
     const {id} = req.params;
     const {checked, item} = req.body;
     const itemToUpdate = items.find((item) => item.id == id);
-    if (checked) itemToUpdate.checked = checked;
+    if (checked !=null) itemToUpdate.checked = checked;
     if (item) itemToUpdate.item = item;
     res.send(`the item  ${itemToUpdate.item} was updated`);
   }
