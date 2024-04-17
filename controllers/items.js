@@ -23,7 +23,7 @@
         item
     }
     items.push(newItem);
-    res.send(`the item: ${item.item} was added to the db with the id ${id}`);
+    res.send(`the item: ${newItem.item} was added to the db with the id ${id}`);
   }
 
   export const getItems = (req, res) => {
