@@ -16,7 +16,7 @@
 
   export const createItem = (req, res) => {
     let {checked, item} = req.body;
-    const id = items[items.length-1] + 1;
+    const id = items[items.length-1].id + 1;
     const newItem = {
         id,
         checked,
