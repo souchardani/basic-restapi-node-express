@@ -27,7 +27,7 @@
   }
 
   export const getItems = (req, res) => {
-    res.send(users);
+    res.send(items);
   }
 
   export const getItem = (req, res) => {
