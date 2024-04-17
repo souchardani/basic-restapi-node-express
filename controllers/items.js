@@ -38,7 +38,7 @@
 
   export const deleteItem = (req,res) => {
     const {id} = req.params;
-    items = items.filter((item) => item.id !== id);
+    items = items.filter((item) => item.id !=  parseInt(id));
     res.send(`the item with id: ${id} was deleted from the db`);
   }
 
