@@ -13,8 +13,8 @@ router.get("/", (req, res) => {
 router.post("/", (req,res) => {
     const user = req.body;
     const userWithId = {...user, id: uuidv4()};
-    users.push(user);
-    res.send(`User with the name ${user.firstName} added to the database`)
+    users.push(userWithId);
+    res.send(`User with the name ${userWithId.firstName} added to the database`)
 })
 
 router.get("/:id", (req, res) => {
