@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const router = express.Router();
 
-const users = []
+let users = []
 
 //todas las rutas de aqui empiezan con /users
 router.get("/", (req, res) => {
