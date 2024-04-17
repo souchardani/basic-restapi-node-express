@@ -1,11 +1,10 @@
 import express from "express";
 import bodyParser from "body-parser";
-import usersRoutes from "./routes/users.js"
-import itemsRoutes from "./routes/items.js"
-
+import usersRoutes from "./routes/users.js";
+import itemsRoutes from "./routes/items.js";
+import cors from "cors";
 const app = express();
 const PORT = 5000;
-const cors = require('cors') 
 
 app.use(bodyParser.json());
 app.use(cors()); 
